@@ -11,28 +11,15 @@
 // }
 
 
-// Make a function that gets an array and get the second largest number
+// Make a function that returns an element in right spot from the array (Aš nesuprantu į šitą užd bet parašiau kaip suprantu)
 
 const arrOfNum = [20, 10, 0, 5, 1, 40, 26, 2];
-function secondLargest(arr) {
 
-    let largest = arr[0];
-    let secondLargest = arr[1];
 
-    if (secondLargest > largest) {
-        [largest, secondLargest] = [secondLargest, largest]; // Swap if out of order
-    }
-
-    for (let i = 2; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            secondLargest = largest;
-            largest = arr[i];
-        } else if (arr[i] > secondLargest && arr[i] !== largest) {
-            secondLargest = arr[i];
-        }
-    }
-
-    return largest === secondLargest ? null : secondLargest; // Return null if no second largest
+function findRightSpot(arr, num) {
+      return arr[num]
 }
 
-console.log(secondLargest(arrOfNum)); // Output: 26
+console.log(findRightSpot(arrOfNum, 1));
+
+
